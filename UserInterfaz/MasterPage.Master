@@ -1,0 +1,72 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="UserInterfaz.MasterPage" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Prototipo de GMaps BCP</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>    
+    <div id="wrapper">
+        <div id="sitename">
+			<h1><a href="#">Prototipo de GMaps BCP</a></h1>
+	    </div>
+        <div id="header">
+			<h2>Bienvenidos al sitio web de prototipo de GMaps BCP</h2>
+			<div class="tagline"><p>Este es un primer prototipo para realizar un aplicativo que realiza manejo de sucursales y tecnologia google Maps para poder realizar un control de sucursales, cajeros automaticos, y agentes de venta i/o Cobranza.</p></div>            
+	</div>
+        <div id="body" class="clear">
+        <div id="sidebar" class="column-left">
+         <ul>
+            <li>
+                <h4>Menú</h4>
+                <ul class="blocklist">
+                <% if (Session["SelectMenu"] == "Vista Puntos")%>
+                <% { %>
+                    <li class="selected-item"><a href="VisorPuntosGMaps.aspx">Vista Puntos</a></li> 
+                <% }
+                   else
+                   {
+                     %>
+                    <li><a href="VisorPuntosGMaps.aspx">Vista Puntos</a></li>
+                <% }  
+                   if (Session["SelectMenu"] == "Admministracion de Puntos")
+                   {
+                %>                
+                        <li class="selected-item"><a href="AdministradorPuntos.aspx">Admministracion de Puntos</a></li>
+                <% }
+                   else
+                   {
+                      %>
+                       <li><a href="AdministradorPuntos.aspx">Admministracion de Puntos</a></li>
+                 <%}
+                     if (Session["SelectMenu"] == "Hoja de ruta")
+                     {
+                  %>
+                        <li class="selected-item"><a href="GeneracionRutas.aspx">Hoja de Ruta</a></li>
+                  <% 
+                     }
+                     else
+                     {
+                  %>
+                        <li><a href="GeneracionRutas.aspx">Hoja de Ruta</a></li>
+                  <% 
+                     } 
+                  %>
+                </ul>
+            </li>
+        </ul>
+        </div>
+        <div id="content" class="column-right">     
+            <asp:ContentPlaceHolder ID="ContentPlaceHolderMaster" runat="server">        
+            </asp:ContentPlaceHolder>
+        </div>
+        </div>
+        <div id="footer" class="clear">
+			<p class="left">Banco de Crédito de Bolivia &copy; Todos Los Derechos Reservados 2013.</p>
+			<p class="right"><a href="http://bcp.com.bo/">Sito del BCP</a> By Victor Angel Chambi Nina</p>
+		</div>
+    </div>    
+</body>
+</html>

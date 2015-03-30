@@ -1,0 +1,520 @@
+/** global **/
+body 
+{
+	margin:0px auto;
+	padding:0;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	color:#333;
+	background:#fff url('images/body-bg.jpg') repeat-x;
+}
+
+* 
+{
+	margin:0;
+	padding:0;
+}
+
+
+/** element defaults **/
+table 
+{
+	width:100%;
+	font-family:Arial, Helvetica, sans-serif;
+	text-align:left;
+}
+
+th, td 
+{
+	padding:5px 3px;
+}
+
+th 
+{
+	color:#fff;
+	border-top:3px solid #082659;
+	background-color:#0C3A87;
+}
+
+td 
+{
+	border-bottom:1px solid #f4f4f4;
+}
+
+code, blockquote 
+{
+	display:block;
+	border-left:5px solid #ddd;
+	padding:10px;
+	margin-bottom:20px;
+}
+blockquote p 
+{
+	font-style:italic;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	margin:0;
+	height: 1%;
+}
+
+p 
+{
+	line-height:1em;
+	margin-bottom:10px;
+}
+a 
+{
+	color:#0D3C84;
+}
+a:hover 
+{
+	color:#0C3A85;
+}
+a:focus 
+{
+	outline:none;
+}
+
+fieldset 
+{
+	display:block;
+	border:none;
+	border-top:1px solid #e0e0e0;	
+}
+
+fieldset legend, fieldset form table .labelBold
+{
+	font-weight:bold;
+	font-size:13px;
+	padding-right:10px;
+	color:#222;
+	padding-bottom:15px;
+}
+
+/*fieldset form 
+{
+	padding-top:15px;
+}
+*/
+fieldset form .BlockText .BlockTextLabel
+{
+	font-style:italic;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	margin:0;
+	height: 1%;
+}
+fieldset table label 
+{
+	float:left;
+	width:150px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+fieldset form .BlockText
+{
+	display:block;
+	padding:10px 0;
+	margin-bottom:20px;
+}
+
+fieldset form table input, fieldset form p select, fieldset form p textarea 
+{
+	padding:5px;
+	color:#333333;
+	font-size:13px;
+	font-family:Arial, Helvetica, sans-serif;
+	border:1px solid #ddd;
+	float:left;
+	margin-right:15px;
+    height:20px;
+}
+
+fieldset form table select.formSelected
+{
+	padding     :5px;
+	color       :#333333;
+	font-size   :13px;
+	font-family :Arial, Helvetica, sans-serif;
+	border      :1px solid #ddd;
+	float       :left;
+	margin-right:15px;
+    height      :30px;
+}
+
+
+
+fieldset form table input.formbutton 
+{
+	margin-left:150px;
+	background:#0C3A87;
+	border:none;
+	border-bottom:3px solid #082659;
+	color:#ffffff;
+	font-weight:bold;
+	padding:5px 10px;
+	font-size:13px;
+    height: 30px;
+}
+
+fieldset form table input.formbuttonLeft
+{	
+	background:#0C3A87;
+	border:none;
+	border-bottom:3px solid #082659;
+	color:#ffffff;
+	font-weight:bold;
+	padding:5px 10px;
+	font-size:13px;
+	float:none;
+    height: 30px;
+}
+
+h1 
+{
+	font-size:45px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+h2 
+{
+	color:#061C41;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:30px;
+	font-weight:bold;
+	letter-spacing:-2px;
+	padding:0 0 5px;
+	margin:0;
+}
+
+h3 
+{
+	font-family:Arial,Helvetica,sans-serif;
+	color:#0D357B;
+	font-size:20px;
+	padding-bottom:10px;
+}
+
+h4 
+{
+	font-family:Arial,Helvetica,sans-serif;
+	padding-bottom:10px;
+	font-size:15px;
+	color:#0C3A85;
+}
+
+h5 
+{
+	padding-bottom:10px;
+	font-size:13px;
+	color:#666666;
+}
+
+ul, ol 
+{
+	margin:0 0 35px 35px;
+}
+
+li 
+{
+	padding-bottom:5px;
+}
+
+
+/** wrapper **/
+div#wrapper 
+{
+	width:920px;
+	margin:0px 150px;
+	padding:0;
+}
+
+
+/** sitename **/
+div#sitename h1 
+{
+	font-size:48px;
+	letter-spacing:-5px;
+	margin:0;
+	height:82px;
+	padding:18px 0 0;
+}
+
+div#sitename h1 a,
+div#sitename h1 a:hover 
+{
+	color:#fff;
+	font-weight:normal;
+	text-decoration:none;
+}
+
+/** header **/
+div#header 
+{
+	padding:50px 0 40px;
+	margin:0 auto;
+	height:111px;
+	background:transparent url('images/header-bg.jpg') no-repeat;
+}
+
+div#header h2 
+{
+	color:#ffffff;
+	padding-bottom:0;
+	font-weight:normal;
+	font-family:'Lucida Grande','Lucida Sans Unicode',Geneva,Verdana,Sans-Serif;
+	font-size:32px;
+	letter-spacing:0;
+}
+
+div#header div.tagline 
+{
+	color:#C2D7F9;
+	font-size:14px;
+	padding-bottom:10px;
+	font-family:Arial,Helvetica,sans-serif;
+}
+
+div#header div.tagline a 
+{
+	color:#ffffff;
+}
+
+
+/** body **/
+div#body 
+{
+	padding:10px 0;	
+}
+
+
+/** content+sidebar styles **/
+div#content 
+{
+	width:600px;
+}
+
+div.column-left 
+{
+	float:left;
+	margin-right:20px;
+}
+
+div.column-right 
+{
+	float:right;
+}
+
+div#sidebar 
+{
+	width:268px;
+}
+div#sidebar ul 
+{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+div#sidebar li ul 
+{
+	margin-bottom:20px;
+	width:250px;
+}
+
+div#sidebar li ul li 
+{
+	display:block;
+	padding:12px 10px;
+	border-bottom:1px solid #ddd;
+	color:#777;
+}
+
+div#sidebar li ul li a 
+{
+	color:#333;
+	text-decoration:none;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+}
+
+div#sidebar li ul li a:hover 
+{
+	color:#09285E;
+	text-decoration:underline;
+}
+
+
+div#sidebar li ul.blocklist li 
+{
+	padding:0;
+}
+
+div#sidebar li ul.blocklist li.selected-item  
+{
+	border-bottom:none;
+}
+
+div#sidebar li ul.blocklist li.selected-item a 
+{
+	color:#fff;
+	font-weight:bold;
+	background:transparent url('images/item-selected.jpg') no-repeat;
+}
+
+div#sidebar li ul.blocklist li.selected-item a:hover 
+{
+	text-decoration:none;
+}
+
+div#sidebar li ul.blocklist li a 
+{
+	color:#666;
+	width:260px;
+	display:block;
+	padding:13px 10px;
+}
+
+div#sidebar h4 
+{ 
+	color:#0C367E;
+	font-family:arial;
+	font-size:16px;
+	text-transform:uppercase;
+	font-weight:bold;
+	margin:0;
+	padding:7px 10px;
+}
+
+
+/** footer **/
+div#footer 
+{
+	padding:20px 20px;
+	color:#fff;
+	border-top:1px solid #ccc;
+}
+
+div#footer p 
+{
+	color:#666;
+	margin:0;
+	font-size:11px;
+	width:50%;
+}
+
+div#footer p.left 
+{ 
+    float:left; 
+}
+
+div#footer p.right 
+{ 
+    float:right; text-align:right; 
+}
+
+div#footer p a 
+{
+	color:#666;
+	font-weight:bold;
+	text-decoration:none;
+	border-bottom:1px solid #999;
+}
+
+/**Class Style**/
+.Label
+{ 
+	float:left;
+	width:100px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+.ErrorLeft
+{ 
+	float:left;
+	margin-right:15px;
+}
+
+/** clear fix **/
+.clear:after 
+{
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clear 
+{
+	display: inline-block;
+}
+
+.clear 
+{
+	display: block;
+}
+
+.invisible { display: none; }
+
+
+/*Estilos del panel desplegabel (Acordeon)*/
+#accordion 
+{
+    width: 600px;
+}
+#accordion h3 
+{
+    background-color: #DCDFF4;
+    color: 						#6D76AF;
+    cursor: 					pointer;
+    font-family: 			Tahoma;
+    font-size: 				17px;
+    font-weight: 			normal;
+    height: 					1.7em;
+    line-height: 			1.7em;
+    margin:					 	0 0 2px;
+    padding: 					0 20px;
+    position: 				relative;
+}
+#accordion h3:hover 
+{
+    background-color:           #0C3A87;
+    color: 						#FFFFFF;
+}
+#accordion h3 span 
+{
+    background: 			url("http://4.bp.blogspot.com/_hljKDuw-cxQ/TRGAe8HVtVI/AAAAAAAARWQ/zvuYXtF1o1c/s00/demoacordeonjs.gif") no-repeat scroll right top transparent;
+    display: 	block;
+    height: 	16px;
+    position: absolute;
+    right: 		20px;
+    top: 			7px;
+    width: 		16px;
+}
+#accordion h3.active span 
+{
+    background-position: right bottom;
+}
+
+#accordion h3.active 
+{
+    background-color:           #0C3A87;
+    color: 						#FFFFFF;
+}
+
+.modalBackground 
+{
+	background-color:Black;
+	filter:alpha(opacity=90);
+	opacity:0.8;
+}
+.modalPopup 
+{
+	background-color:#FFFFFF;
+	border-width:3px;
+	border-style:solid;
+	border-color:black;
+	padding-top:10px;
+	padding-left:10px;
+	width:400px;
+	height:280px;
+}
