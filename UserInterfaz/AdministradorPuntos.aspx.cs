@@ -30,7 +30,7 @@ namespace UserInterfaz
             if (!IsPostBack)
             {
                 GestorParametro gestorParametro  = new GestorParametro();
-                 listParametro                   = gestorParametro.getManyParametro("TIPO_PUNTO_ID_IN");
+                 listParametro                   = gestorParametro.GetManyParametro("TIPO_PUNTO_ID_IN");
                 if (listParametro.success)
                 {
                     listParametro.listParametro.RemoveAt(0);
@@ -128,7 +128,7 @@ namespace UserInterfaz
         protected void CargaDepartamento()
         {
             GestorParametro gestorParametro                    = new GestorParametro();
-            ListParametro listParametro                        = gestorParametro.getManyParametro("DEPARTAMENTO");
+            ListParametro listParametro                        = gestorParametro.GetManyParametro("DEPARTAMENTO");
             if (listParametro.success)
             {
                 listParametro.listParametro.RemoveAt(0);
@@ -142,7 +142,7 @@ namespace UserInterfaz
         protected void CargaMoneda()
         {
             GestorParametro gestorParametro = new GestorParametro();
-            ListParametro listParametro     = gestorParametro.getManyParametro("MONEDA");
+            ListParametro listParametro     = gestorParametro.GetManyParametro("MONEDA");
             if (listParametro.success)
             {
                 ddlMoneda.DataSource        = listParametro.listParametro;

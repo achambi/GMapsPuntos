@@ -29,7 +29,7 @@ namespace UserInterfaz
             XmlDocument oDocument                     = new XmlDocument();
             StringBuilder sb                          = new StringBuilder();
             GestorPuntos gestorPuntos                 = new GestorPuntos();
-            ListPunto ListPunto                       = gestorPuntos.getManyPuntoByTipoId(tipoPuntoId, departamentoId);
+            ListPunto ListPunto                       = gestorPuntos.GetManyPuntoByTipoId(tipoPuntoId, departamentoId);
             JavaScriptSerializer javaScriptSerializer = new JavaScriptSerializer();
             string jsonString                         = javaScriptSerializer.Serialize(ListPunto);
             Response.Write(jsonString);

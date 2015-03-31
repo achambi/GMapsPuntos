@@ -26,7 +26,7 @@ namespace UserInterfaz
         protected void CargaTiposPunto()
         {
             GestorParametro gestorParametro                    = new GestorParametro();
-            ListParametro listParametro                        = gestorParametro.getManyParametro("TIPO_PUNTO_ID_IN");
+            ListParametro listParametro                        = gestorParametro.GetManyParametro("TIPO_PUNTO_ID_IN");
             if (listParametro.success)
             {
                 ddlTipoPuntos.DataSource                       = listParametro.listParametro;
@@ -41,7 +41,7 @@ namespace UserInterfaz
         protected void CargaDepartamento()
         {
             GestorParametro gestorParametro = new GestorParametro();
-            ListParametro listParametro = gestorParametro.getManyParametro("DEPARTAMENTO");
+            ListParametro listParametro = gestorParametro.GetManyParametro("DEPARTAMENTO");
             if (listParametro.success)
             {
                 ddlDepartamentos.DataSource     = listParametro.listParametro;
