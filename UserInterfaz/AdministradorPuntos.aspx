@@ -134,7 +134,7 @@
              }
            );
            $("#<%=txtLatitud.ClientID%>").val(location.k);
-           $("#<%=txtLongitud.ClientID%>").val(location.B);
+           $("#<%=txtLongitud.ClientID%>").val(location.D);
         }
        
         function codeAddress(campo,zoom)
