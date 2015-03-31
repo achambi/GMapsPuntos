@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Data;
 using Entities;
 using DataAccess;
@@ -16,19 +14,18 @@ namespace BussinesLogic
         /// Trae todos los datos de los clientes
         /// </summary>
         /// <returns>Data Table con los datos de los clientes</returns>
-        public ListParametro getManyParametro(String tipoParametro)
+        public ListParametro GetManyParametro(String tipoParametro)
         {
-            ListParametro listParametro = null;
-            DataTable DTCliente         = null;
+            ListParametro listParametro;
             try
             {
-                ConectorParametro conector = new ConectorParametro();                
-                DTCliente                   = conector.getManyParametro(tipoParametro);
-                listParametro               = new ListParametro() { success = true, message = String.Empty };
+                var conector = new ConectorParametro();                
+                DataTable dtCliente         = conector.GetManyParametro(tipoParametro);
+                listParametro               = new ListParametro { success = true, message = String.Empty };
                 listParametro.listParametro = new List<Parametro>();
-                foreach (DataRow row in DTCliente.Rows)
+                foreach (DataRow row in dtCliente.Rows)
                 {
-                    Parametro item           = new Parametro();
+                    var item           = new Parametro();
                     item.parametroId         = Convert.ToInt32(row["PARAMETRO_ID_IN"]);
                     item.parametroCodigo     = Convert.ToInt32(row["PARAMETRO_CODIGO_IN"]);
                     item.tipoParametro       = Convert.ToString(row["TIPO_PARAMETRO_NV"]);
@@ -39,7 +36,7 @@ namespace BussinesLogic
             }
             catch (Exception ex)
             {
-                listParametro = new ListParametro() { success = false, message = ex.Message };
+                listParametro = new ListParametro { success = false, message = ex.Message };
                 TextLogger.LogError(LogManager.GetCurrentClassLogger(), ex, "Error En el metodo: getManyParametro");
             }
             return listParametro;
